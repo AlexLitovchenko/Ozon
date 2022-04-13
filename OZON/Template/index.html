@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>URL shorter</title>
+    </head>
+    <body>
+        <form action="/" method="post">
+            <input type="text" placeholder="https://google.com" name="URL"/>
+            <button type="submit">Shorter</button>
+        </form>
+        {{if .LongError}}
+        <span style="color: red;">{{.LongError}}</span>
+        {{end}}
+        {{if .LongID}}
+        <span style="color: green;"><a href="http://localhost:8080/{{.LongID}}">http://localhost:8080/{{.LongID}}</a></span>
+        {{end}}
+    </body>
+</html>
